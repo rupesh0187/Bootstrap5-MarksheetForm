@@ -1,0 +1,100 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Use this page to detail your site's privacy policy.</p>
+<html>
+    <body>
+
+   
+<table  id="tbl" class="table table-bordered-9 " border="1">
+            <thead >
+                <tr>
+                 <th>Student Name</th>
+                 <th>Course Name</th>
+                 <th>Batch Year</th>
+                 <th>Sememster</th>
+                 <th>JAVA MARKS</th>
+                 <th>HTML</th>
+                 <th>CSS</th>
+                 <th>JAVASCRPIT</th>
+                 <th>BOOTSTARP</th>
+                 <th>Total Marks</th>
+                 <th>Average Marks</th>
+                </tr>
+            <thead>
+            <tbody>
+
+
+            </tbody>
+            </table>
+
+        
+    
+    
+    <script type="text/javascript">
+
+
+        function Marksheet()
+        {
+            var name=document.getElementById("Name").value;
+            var cname=document.getElementById("Course").value;
+            var batch=document.getElementById("Batch").value;
+            var sem=document.getElementById("Semester").value;
+            var java=parseInt(document.getElementById("java").value);
+            var html=parseInt(document.getElementById("html").value);
+            var css=parseInt(document.getElementById("css").value);
+            var javascrpit=parseInt(document.getElementById("javascrpit").value);
+            var bootstrap=parseInt(document.getElementById("bootstrap").value);
+
+            var TotalMarks=java+html+css+javascrpit+bootstrap;
+            var Average= TotalMarks * 100/500;
+
+            
+
+            var tr=document.createElement('tr');
+
+            var td1=tr.appendChild(document.createElement('td'));
+            var td2=tr.appendChild(document.createElement('td'));
+            var td3=tr.appendChild(document.createElement('td'));
+            var td4=tr.appendChild(document.createElement('td'));
+            var td5=tr.appendChild(document.createElement('td'));
+            var td6=tr.appendChild(document.createElement('td'));
+            var td7=tr.appendChild(document.createElement('td'));
+            var td8=tr.appendChild(document.createElement('td'));
+            var td9=tr.appendChild(document.createElement('td'));
+            var td10=tr.appendChild(document.createElement('td'));
+            var td11=tr.appendChild(document.createElement('td'));
+
+            td1.innerHTML +=name;
+            td2.innerHTML +=cname;
+            td3.innerHTML +=batch;
+            td4.innerHTML +=sem;
+            td5.innerHTML +=java;
+            td6.innerHTML +=html;
+            td7.innerHTML +=css;
+            td8.innerHTML +=javascrpit;
+            td9.innerHTML +=bootstrap;
+            td10.innerHTML +=TotalMarks;
+            td11.innerHTML +=Average;
+
+            document.write("Student Name"+"<b>"td1"<b>"+"</br>");
+            document.write("Course Name"+"<b>"+cname+"<b>"+"</br>");
+            document.write("Batch Year"+"<b>"+batch+"<b>"+"</br>");
+            document.write("Sememster"+"<b>"+sem+"<b>"+"</br>");
+            document.write("the Total Marks is:"+"<b>"+TotalMarks+"<b>"+"</br>");
+            document.write("the Average is:"+"<b>"+Average+"<b>"+"</br>");
+
+
+            document.getElementById("tbl").appendChild(tr);
+
+
+
+        }
+
+
+       
+    </script>
+ </body>
+</html>
